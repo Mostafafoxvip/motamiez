@@ -82,6 +82,28 @@ motamiez/
 └── package.json
 ```
 
+## النشر على GitHub Pages
+
+يتم نشر المشروع تلقائياً على GitHub Pages عند الدفع إلى الفرع الرئيسي.
+
+### الدومين المخصص
+
+الموقع متاح على: [motamiezmobil.com](https://motamiezmobil.com)
+
+### إعدادات DNS المطلوبة
+
+لربط الدومين المخصص، يجب إضافة سجل CNAME في إعدادات DNS:
+- النوع: CNAME
+- الاسم: motamiezmobil.com (أو @)
+- القيمة: mostafafoxvip.github.io
+
+### سير العمل التلقائي
+
+يستخدم المشروع GitHub Actions للنشر التلقائي:
+- يتم بناء المشروع تلقائياً عند كل push
+- يتم نشر ملفات `dist` على GitHub Pages
+- ملف CNAME يتم نسخه تلقائياً من مجلد `public`
+
 ## المساهمة
 
 المساهمات مرحب بها! يرجى فتح issue أولاً لمناقشة التغييرات المقترحة.
