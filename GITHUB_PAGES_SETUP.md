@@ -42,6 +42,10 @@
 ```
 
 #### خيار 2: استخدام A Records (بديل)
+
+> **⚠️ تحذير هام**: عناوين IP قد تتغير. يُرجى التحقق من العناوين الحالية في [التوثيق الرسمي لـ GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain) قبل الإضافة.
+
+العناوين الحالية (اعتباراً من 2024):
 ```
 النوع: A
 الاسم: @
@@ -65,8 +69,6 @@
 الاسم: @
 القيمة: 185.199.111.153
 ```
-
-> **ملاحظة**: عناوين IP هذه هي عناوين GitHub Pages الرسمية وقد تتغير. تحقق من [التوثيق الرسمي](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain).
 
 ### 4. التحقق من إعدادات GitHub Pages
 
