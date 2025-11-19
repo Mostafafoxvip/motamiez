@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
@@ -7,7 +7,10 @@ import { products } from './data/products';
 import './App.css';
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem('motamiez-cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
   const [showCart, setShowCart] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('الكل');
 
@@ -47,6 +50,11 @@ function App() {
   const getTotalPrice = () => {
     return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   };
+
+  // حفظ السلة في localStorage عند تغييرها
+  useEffect(() => {
+    localStorage.setItem('motamiez-cart', JSON.stringify(cart));
+  }, [cart]);
 
   const categories = ['الكل', ...new Set(products.map(p => p.category))];
   const filteredProducts = selectedCategory === 'الكل'
