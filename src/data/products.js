@@ -7,6 +7,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/4A90E2/ffffff?text=Samsung+Galaxy',
     description: 'هاتف ذكي متطور بكاميرا عالية الدقة وشاشة AMOLED',
     inStock: true,
+    rating: 4.5,
+    reviews: 128,
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/FF6B6B/ffffff?text=Nike+Shoes',
     description: 'حذاء رياضي مريح مناسب للجري والتمارين اليومية',
     inStock: true,
+    rating: 4.8,
+    reviews: 95,
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/95E1D3/ffffff?text=Apple+Watch',
     description: 'ساعة ذكية بمميزات صحية ورياضية متقدمة',
     inStock: true,
+    rating: 4.7,
+    reviews: 203,
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/F38181/ffffff?text=Backpack',
     description: 'حقيبة ظهر واسعة ومريحة للاستخدام اليومي',
     inStock: true,
+    rating: 4.3,
+    reviews: 67,
   },
   {
     id: 5,
@@ -43,6 +51,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/AA96DA/ffffff?text=Headphones',
     description: 'سماعات بلوتوث بجودة صوت عالية وإلغاء للضوضاء',
     inStock: true,
+    rating: 4.6,
+    reviews: 142,
   },
   {
     id: 6,
@@ -52,6 +62,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/FCBAD3/ffffff?text=Book',
     description: 'كتاب ملهم في تطوير الذات والنجاح الشخصي',
     inStock: true,
+    rating: 4.9,
+    reviews: 312,
   },
   {
     id: 7,
@@ -61,6 +73,8 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/A8E6CF/ffffff?text=Dell+Laptop',
     description: 'لابتوب قوي مناسب للعمل والدراسة',
     inStock: true,
+    rating: 4.4,
+    reviews: 89,
   },
   {
     id: 8,
@@ -70,5 +84,7 @@ export const products = [
     image: 'https://via.placeholder.com/300x300/FFD3B6/ffffff?text=T-Shirt',
     description: 'قميص قطني مريح ومناسب للارتداء اليومي',
     inStock: false,
+    rating: 4.2,
+    reviews: 54,
   },
 ];

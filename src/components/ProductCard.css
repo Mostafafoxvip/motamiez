@@ -63,8 +63,40 @@
 .product-description {
   font-size: 0.9rem;
   color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 1rem;
-  flex: 1;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.star.full {
+  color: #FFA500;
+}
+
+.star.half {
+  background: linear-gradient(90deg, #FFA500 50%, #ddd 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  color: #666;
 }
 
 .product-footer {

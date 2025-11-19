@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.css';
 
-function Cart({ items, onClose, onUpdateQuantity, onRemoveItem, totalPrice }) {
+function Cart({ items, onClose, onUpdateQuantity, onRemoveItem, totalPrice, onCheckout }) {
   return (
     <div className="cart-overlay" onClick={onClose}>
       <div className="cart-panel" onClick={(e) => e.stopPropagation()}>
@@ -45,7 +45,7 @@ function Cart({ items, onClose, onUpdateQuantity, onRemoveItem, totalPrice }) {
                   <span>المجموع:</span>
                   <span className="total-amount">{totalPrice.toFixed(2)} ريال</span>
                 </div>
-                <button className="checkout-btn">إتمام الشراء</button>
+                <button className="checkout-btn" onClick={onCheckout}>إتمام الشراء</button>
               </div>
             </>
           )}
