@@ -39,6 +39,23 @@
   font-weight: bold;
 }
 
+.condition-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.condition-badge.new {
+  background-color: #ffc107;
+  color: #333;
+}
+
 .product-info {
   padding: 1.25rem;
   display: flex;
@@ -63,8 +80,20 @@
 .product-description {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   flex: 1;
+}
+
+.product-storage {
+  display: inline-block;
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  width: fit-content;
 }
 
 .product-footer {
@@ -72,46 +101,64 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+  gap: 0.5rem;
 }
 
 .product-price {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: var(--secondary-color);
 }
 
-.add-to-cart-btn {
-  background-color: var(--primary-color);
+.whatsapp-btn {
+  background-color: #25D366;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: bold;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.add-to-cart-btn:hover:not(:disabled) {
-  background-color: #357ABD;
+.whatsapp-btn:hover:not(:disabled) {
+  background-color: #128C7E;
   transform: scale(1.05);
 }
 
-.add-to-cart-btn:disabled {
+.whatsapp-btn:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+.whatsapp-icon {
+  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
   .product-image {
     height: 200px;
   }
-  
+
   .product-name {
     font-size: 1.1rem;
   }
-  
+
   .product-price {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .product-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
