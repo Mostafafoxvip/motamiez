@@ -1,17 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
 import Footer from './components/Footer';
-import { products } from './data/products';
+import AdminPanel from './components/AdminPanel';
+import { products as defaultProducts } from './data/products';
 import './App.css';
+
+const ADMIN_CODE = '123456'; // كود الدخول للوحة التحكم
+const STORAGE_KEY = 'motamiez_products';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('الكل');
+  const [showAdmin, setShowAdmin] = useState(false);
+  const [keySequence, setKeySequence] = useState('');
+  const [products, setProducts] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : defaultProducts;
+  });
 
-  const categories = ['الكل', ...new Set(products.map(p => p.category))];
-  const filteredProducts = selectedCategory === 'الكل'
-    ? products
-    : products.filter(p => p.category === selectedCategory);
+  // Secret key combination to open admin (type "admin" anywhere)
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      const newSequence = (keySequence + e.key).slice(-5);
+      setKeySequence(newSequence);
+
+      if (newSequence === 'admin') {
+        const code = prompt('أدخل رمز الدخول:');
+        if (code === ADMIN_CODE) {
+          setShowAdmin(true);
+        } else if (code !== null) {
+          alert('رمز خاطئ!');
+        }
+        setKeySequence('');
+      }
+    };
+
+    window.addEventListener('keypress', handleKeyPress);
+    return () => window.removeEventListener('keypress', handleKeyPress);
+  }, [keySequence]);
+
+  // Save products to localStorage
+  const handleUpdateProducts = useCallback((updatedProducts) => {
+    setProducts(updatedProducts);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedProducts));
+  }, []);
+
+  // Memoized categories
+  const categories = useMemo(() => {
+    return ['الكل', ...new Set(products.map(p => p.category))];
+  }, [products]);
+
+  // Memoized filtered products
+  const filteredProducts = useMemo(() => {
+    return selectedCategory === 'الكل'
+      ? products
+      : products.filter(p => p.category === selectedCategory);
+  }, [products, selectedCategory]);
 
   return (
     <div className="app">
@@ -45,11 +89,23 @@ function App() {
             </div>
           </div>
 
+          <div className="products-count">
+            عرض {filteredProducts.length} منتج
+          </div>
+
           <ProductList products={filteredProducts} />
         </div>
       </main>
 
       <Footer />
+
+      {showAdmin && (
+        <AdminPanel
+          products={products}
+          onUpdateProducts={handleUpdateProducts}
+          onClose={() => setShowAdmin(false)}
+        />
+      )}
     </div>
   );
 }
