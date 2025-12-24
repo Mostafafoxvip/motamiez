@@ -1,22 +1,27 @@
 import React from 'react';
+import { whatsappNumber } from '../data/products';
 import './Header.css';
 
-function Header({ cartItemsCount, onCartClick }) {
+function Header() {
+  const handleWhatsAppClick = () => {
+    const message = 'مرحباً، أريد الاستفسار عن أسعار الجملة لهواتف آيفون المستعملة';
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <header className="header">
       <div className="container header-content">
         <div className="logo">
-          <h1>متميز</h1>
-          <p>متجرك الإلكتروني المتميز</p>
+          <h1>متميز موبايل</h1>
+          <p>بيع جملة - آيفون مستعمل</p>
         </div>
-        
+
         <nav className="nav">
-          <button className="cart-button" onClick={onCartClick}>
-            <span className="cart-icon">🛒</span>
-            <span className="cart-text">السلة</span>
-            {cartItemsCount > 0 && (
-              <span className="cart-badge">{cartItemsCount}</span>
-            )}
+          <span className="uae-badge">الإمارات</span>
+          <button className="whatsapp-header-btn" onClick={handleWhatsAppClick}>
+            <span className="whatsapp-icon">📱</span>
+            <span className="btn-text">واتساب</span>
           </button>
         </nav>
       </div>

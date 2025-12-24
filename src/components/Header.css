@@ -1,7 +1,7 @@
 .header {
-  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: white;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -15,66 +15,80 @@
 }
 
 .logo h1 {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.15rem;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .logo p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   opacity: 0.9;
+  color: #ff6b35;
+  font-weight: 500;
 }
 
-.cart-button {
-  background-color: white;
-  color: var(--primary-color);
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.uae-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-header-btn {
+  background-color: #25D366;
+  color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  position: relative;
+  gap: 0.4rem;
   transition: all 0.3s ease;
 }
 
-.cart-button:hover {
+.whatsapp-header-btn:hover {
+  background-color: #128C7E;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
 }
 
-.cart-icon {
-  font-size: 1.5rem;
-}
-
-.cart-badge {
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  background-color: var(--danger-color);
-  color: white;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: bold;
+.whatsapp-icon {
+  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
   .logo h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  
+
   .logo p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
-  
-  .cart-text {
+
+  .btn-text {
     display: none;
+  }
+
+  .uae-badge {
+    display: none;
+  }
+
+  .whatsapp-header-btn {
+    padding: 0.6rem;
   }
 }
