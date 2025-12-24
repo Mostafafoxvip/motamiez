@@ -1,7 +1,7 @@
 .footer {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 2.5rem 0 1rem;
   margin-top: auto;
 }
 
@@ -13,8 +13,8 @@
 }
 
 .footer-section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
   background: linear-gradient(135deg, #25D366, #128C7E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22,14 +22,26 @@
 }
 
 .footer-section h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
   color: #ecf0f1;
 }
 
 .footer-section p {
   color: #bdc3c7;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.wholesale-notice {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .footer-section ul {
@@ -37,18 +49,19 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   color: #bdc3c7;
+  font-size: 0.9rem;
 }
 
 .footer-whatsapp-btn {
   background-color: #25D366;
   color: white;
   border: none;
-  padding: 0.75rem 1.25rem;
+  padding: 0.6rem 1rem;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: bold;
   transition: all 0.3s ease;
 }
@@ -60,14 +73,20 @@
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid #34495e;
   color: #95a5a6;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .wholesale-notice {
+    display: block;
     text-align: center;
   }
 }

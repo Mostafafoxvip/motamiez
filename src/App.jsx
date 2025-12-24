@@ -20,8 +20,14 @@ function App() {
       <main className="main-content">
         <div className="container">
           <div className="hero-section">
-            <h2>هواتف آيفون مستعملة بحالة ممتازة</h2>
-            <p>أفضل الأسعار في المغرب - ضمان على جميع الأجهزة</p>
+            <div className="wholesale-tag">بيع جملة فقط</div>
+            <h2>هواتف آيفون مستعملة - جملة</h2>
+            <p>أسعار منافسة للتجار وأصحاب المحلات - الإمارات العربية المتحدة</p>
+            <div className="hero-features">
+              <span>مفحوصة 100%</span>
+              <span>ضمان الجودة</span>
+              <span>شحن سريع</span>
+            </div>
           </div>
 
           <div className="category-filter">

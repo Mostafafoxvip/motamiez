@@ -4,7 +4,7 @@ import './Footer.css';
 
 function Footer() {
   const handleWhatsAppClick = () => {
-    const message = 'مرحباً، أريد الاستفسار عن هواتف آيفون المتوفرة لديكم';
+    const message = 'مرحباً، أريد الاستفسار عن أسعار الجملة لهواتف آيفون المستعملة';
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -15,16 +15,19 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>متميز موبايل</h3>
-            <p>متجرك المتخصص في هواتف آيفون المستعملة بحالة ممتازة وبأفضل الأسعار في المغرب</p>
+            <p>متخصصون في بيع هواتف آيفون المستعملة بالجملة - أسعار منافسة للتجار وأصحاب المحلات</p>
+            <div className="wholesale-notice">
+              بيع جملة فقط - الحد الأدنى للطلب 5 قطع
+            </div>
           </div>
 
           <div className="footer-section">
-            <h4>لماذا تختارنا؟</h4>
+            <h4>مميزاتنا</h4>
             <ul>
-              <li>ضمان على جميع الأجهزة</li>
-              <li>فحص شامل قبل البيع</li>
-              <li>أسعار منافسة</li>
-              <li>خدمة ما بعد البيع</li>
+              <li>أجهزة مفحوصة 100%</li>
+              <li>ضمان الجودة</li>
+              <li>أسعار جملة منافسة</li>
+              <li>شحن لجميع الدول</li>
             </ul>
           </div>
 
@@ -33,16 +36,16 @@ function Footer() {
             <ul>
               <li>
                 <button className="footer-whatsapp-btn" onClick={handleWhatsAppClick}>
-                  📱 واتساب: اضغط للتواصل
+                  📱 واتساب: +971 54 461 6616
                 </button>
               </li>
-              <li>📍 المغرب</li>
+              <li>📍 الإمارات العربية المتحدة</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 متميز موبايل. جميع الحقوق محفوظة.</p>
+          <p>&copy; 2025 متميز موبايل - بيع جملة. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import './ProductCard.css';
 
 function ProductCard({ product }) {
   const handleWhatsAppClick = () => {
-    const message = `مرحباً، أنا مهتم بشراء:\n${product.name}\nالسعر: ${product.price} درهم\nالسعة: ${product.storage}\nالحالة: ${product.condition}`;
+    const message = `مرحباً، أريد طلب جملة:\n${product.name}\nالسعر: ${product.price} درهم/للقطعة\nالسعة: ${product.storage}\nالحالة: ${product.condition}\nالحد الأدنى للطلب: ${product.minOrder} قطعة`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -17,10 +17,11 @@ function ProductCard({ product }) {
           <div className="out-of-stock-badge">نفذت الكمية</div>
         )}
         {product.condition && (
-          <div className={`condition-badge ${product.condition === 'جديد' ? 'new' : ''}`}>
+          <div className={`condition-badge ${product.condition === 'ممتاز' ? 'excellent' : ''}`}>
             {product.condition}
           </div>
         )}
+        <div className="wholesale-badge">جملة</div>
       </div>
 
       <div className="product-info">
@@ -28,12 +29,20 @@ function ProductCard({ product }) {
         <h3 className="product-name">{product.name}</h3>
         <p className="product-description">{product.description}</p>
 
-        {product.storage && (
-          <span className="product-storage">{product.storage}</span>
-        )}
+        <div className="product-specs">
+          {product.storage && (
+            <span className="product-storage">{product.storage}</span>
+          )}
+          {product.minOrder && (
+            <span className="min-order">الحد الأدنى: {product.minOrder} قطعة</span>
+          )}
+        </div>
 
         <div className="product-footer">
-          <span className="product-price">{product.price} درهم</span>
+          <div className="price-section">
+            <span className="product-price">{product.price} درهم</span>
+            <span className="price-note">سعر القطعة</span>
+          </div>
           <button
             className="whatsapp-btn"
             onClick={handleWhatsAppClick}
@@ -42,7 +51,7 @@ function ProductCard({ product }) {
             {product.inStock ? (
               <>
                 <span className="whatsapp-icon">📱</span>
-                تواصل واتساب
+                اطلب الآن
               </>
             ) : (
               'غير متوفر'
