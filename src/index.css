@@ -4,18 +4,63 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  background: #0f0f1a;
   direction: rtl;
   text-align: right;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
   --primary-color: #25D366;
   --secondary-color: #128C7E;
-  --danger-color: #E74C3C;
-  --text-color: #333;
-  --border-color: #ddd;
-  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --accent-color: #ff6b35;
+  --danger-color: #e74c3c;
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --bg-dark: #0f0f1a;
+  --bg-card: #1a1a2e;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #25D366;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(37, 211, 102, 0.3);
+  color: white;
+}
+
+/* Button reset */
+button {
+  font-family: inherit;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
 }

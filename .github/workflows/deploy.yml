@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - رئيسي
+      - claude/code-review-2RhJO
   workflow_dispatch:
 
 permissions:

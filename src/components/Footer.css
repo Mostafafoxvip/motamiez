@@ -1,47 +1,49 @@
 .footer {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 100%);
   color: white;
-  padding: 2.5rem 0 1rem;
+  padding: 2rem 0 1rem;
   margin-top: auto;
+  border-top: 1px solid rgba(37, 211, 102, 0.2);
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-section h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(135deg, #25D366, #00ff88);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer-section h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  color: #ecf0f1;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .footer-section p {
-  color: #bdc3c7;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .wholesale-notice {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   background: linear-gradient(135deg, #ff6b35, #f7931e);
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: bold;
   display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .footer-section ul {
@@ -49,40 +51,48 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 0.6rem;
-  color: #bdc3c7;
-  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .footer-whatsapp-btn {
-  background-color: #25D366;
+  background: linear-gradient(135deg, #25D366, #128C7E);
   color: white;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.55rem 0.9rem;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
 .footer-whatsapp-btn:hover {
-  background-color: #128C7E;
   transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 1.5rem;
-  border-top: 1px solid #34495e;
-  color: #95a5a6;
-  font-size: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .footer-section ul li {
+    justify-content: center;
   }
 
   .wholesale-notice {

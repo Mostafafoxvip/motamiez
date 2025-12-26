@@ -1,11 +1,12 @@
 .header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 100%);
   color: white;
-  padding: 1rem 0;
-  box-shadow: var(--shadow);
+  padding: 0.9rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(37, 211, 102, 0.2);
 }
 
 .header-content {
@@ -15,19 +16,20 @@
 }
 
 .logo h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.15rem;
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  font-size: 1.6rem;
+  margin-bottom: 0.1rem;
+  background: linear-gradient(135deg, #25D366, #00ff88);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 .logo p {
-  font-size: 0.85rem;
-  opacity: 0.9;
+  font-size: 0.8rem;
   color: #ff6b35;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .nav {
@@ -37,34 +39,42 @@
 }
 
 .uae-badge {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.uae-badge::before {
+  content: '🇦🇪';
+  font-size: 0.9rem;
 }
 
 .whatsapp-header-btn {
-  background-color: #25D366;
+  background: linear-gradient(135deg, #25D366, #128C7E);
   color: white;
   border: none;
-  padding: 0.6rem 1.25rem;
+  padding: 0.55rem 1.1rem;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.4rem;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
 .whatsapp-header-btn:hover {
-  background-color: #128C7E;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp-icon {
@@ -72,12 +82,16 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 0;
+  }
+
   .logo h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .logo p {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .btn-text {
@@ -89,6 +103,6 @@
   }
 
   .whatsapp-header-btn {
-    padding: 0.6rem;
+    padding: 0.5rem 0.75rem;
   }
 }

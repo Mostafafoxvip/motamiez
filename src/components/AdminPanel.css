@@ -1,0 +1,287 @@
+.admin-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.admin-panel {
+  background: #1a1a2e;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 900px;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 15px 15px 0 0;
+}
+
+.admin-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-admin {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close-admin:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.admin-content {
+  padding: 1.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.admin-section {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.admin-section h3 {
+  margin: 0 0 1rem 0;
+  color: #25D366;
+  font-size: 1.2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.form-grid input::placeholder,
+.form-grid textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: none;
+  border-color: #25D366;
+}
+
+.form-grid textarea {
+  grid-column: span 2;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+.products-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.product-row:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.product-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info-admin {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.product-info-admin strong {
+  color: white;
+  font-size: 1rem;
+}
+
+.product-info-admin span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.product-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  background: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #2980b9;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.save-btn {
+  background: #25D366;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #128C7E;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+.edit-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.edit-form textarea {
+  grid-column: span 2;
+}
+
+.edit-actions {
+  grid-column: span 2;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .admin-overlay {
+    padding: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid textarea {
+    grid-column: span 1;
+  }
+
+  .product-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .edit-form {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-form textarea,
+  .edit-actions {
+    grid-column: span 1;
+  }
+}
