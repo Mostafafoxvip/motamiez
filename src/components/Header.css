@@ -1,7 +1,8 @@
 .header {
   background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 100%);
   color: white;
-  padding: 0.9rem 0;
+  padding: 0.75rem 0;
+  padding-top: calc(0.75rem + var(--safe-area-top, 0px));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
@@ -13,63 +14,76 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 .logo h1 {
-  font-size: 1.6rem;
-  margin-bottom: 0.1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0;
   background: linear-gradient(135deg, #25D366, #00ff88);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .logo p {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #ff6b35;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .uae-badge {
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.9);
-  padding: 0.4rem 0.9rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  white-space: nowrap;
 }
 
 .uae-badge::before {
   content: '🇦🇪';
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .whatsapp-header-btn {
   background: linear-gradient(135deg, #25D366, #128C7E);
   color: white;
   border: none;
-  padding: 0.55rem 1.1rem;
+  padding: 0.5rem 1rem;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  min-height: 44px;
+  white-space: nowrap;
 }
 
 .whatsapp-header-btn:hover {
@@ -77,32 +91,66 @@
   box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
 }
 
+.whatsapp-header-btn:active {
+  transform: scale(0.95);
+}
+
 .whatsapp-icon {
   font-size: 1.1rem;
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   .header {
-    padding: 0.75rem 0;
+    padding: 0.6rem 0;
+    padding-top: calc(0.6rem + var(--safe-area-top, 0px));
+  }
+
+  .header-content {
+    padding: 0 0.75rem;
   }
 
   .logo h1 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .logo p {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
-  .btn-text {
-    display: none;
+  .nav {
+    gap: 0.4rem;
   }
 
   .uae-badge {
     display: none;
   }
 
+  .btn-text {
+    display: none;
+  }
+
   .whatsapp-header-btn {
     padding: 0.5rem 0.75rem;
+    min-width: 44px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .logo h1 {
+    font-size: 1.1rem;
+  }
+
+  .logo p {
+    font-size: 0.6rem;
+  }
+
+  .whatsapp-header-btn {
+    padding: 0.5rem;
+  }
+
+  .whatsapp-icon {
+    font-size: 1.2rem;
   }
 }
