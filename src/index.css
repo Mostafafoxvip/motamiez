@@ -2,20 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #0f0f1a;
   direction: rtl;
   text-align: right;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 :root {
@@ -28,11 +38,13 @@ body {
   --bg-dark: #0f0f1a;
   --bg-card: #1a1a2e;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-bottom: env(safe-area-inset-bottom);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -57,10 +69,48 @@ body {
 /* Button reset */
 button {
   font-family: inherit;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Touch-friendly buttons */
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 /* Image optimization */
 img {
   max-width: 100%;
   height: auto;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Prevent pull-to-refresh */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* Fix iOS input zoom */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 14px;
+  }
 }
