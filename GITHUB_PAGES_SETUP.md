@@ -99,7 +99,7 @@
 
 بعد اكتمال سير العمل:
 
-1. افتح: `https://mostafafoxvip.github.io/motamiez/`
+1. افتح: `https://mostafafoxvip.github.io/motamiez/` (ملاحظة: هذا الرابط لتأكيد نجاح النشر فقط، قد لا يعمل الموقع عليه بشكل صحيح. الموقع سيعمل على الدومين المخصص).
 2. بعد إعداد DNS: `https://motamiezmobil.com`
 
 ## ❓ استكشاف الأخطاء
