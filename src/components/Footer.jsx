@@ -15,19 +15,20 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>متميز موبايل</h3>
-            <p>متخصصون في بيع هواتف آيفون المستعملة بالجملة - أسعار منافسة للتجار وأصحاب المحلات</p>
+            <p>متخصصون في بيع هواتف آيفون المستعملة بالجملة في الإمارات - أسعار منافسة للتجار وأصحاب المحلات</p>
             <div className="wholesale-notice">
-              بيع جملة فقط - الحد الأدنى للطلب 5 قطع
+              بيع جملة فقط - الحد الأدنى 5 قطع
             </div>
           </div>
 
           <div className="footer-section">
-            <h4>مميزاتنا</h4>
+            <h4>لماذا تختارنا؟</h4>
             <ul>
-              <li>أجهزة مفحوصة 100%</li>
-              <li>ضمان الجودة</li>
-              <li>أسعار جملة منافسة</li>
-              <li>شحن لجميع الدول</li>
+              <li>✓ أجهزة مفحوصة 100%</li>
+              <li>✓ ضمان الجودة</li>
+              <li>✓ أسعار جملة منافسة</li>
+              <li>✓ شحن سريع لجميع الإمارات</li>
+              <li>✓ دعم فني متواصل</li>
             </ul>
           </div>
 
@@ -40,12 +41,14 @@ function Footer() {
                 </button>
               </li>
               <li>📍 الإمارات العربية المتحدة</li>
+              <li>🌐 motamiezmobil.com</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 متميز موبايل - بيع جملة. جميع الحقوق محفوظة.</p>
+          <p>&copy; 2025 متميز موبايل - جميع الحقوق محفوظة</p>
+          <p className="footer-domain">motamiezmobil.com</p>
         </div>
       </div>
     </footer>
